@@ -27,17 +27,23 @@ class AddItem extends Component {
 
         return (
             <div>
-                <h1 className = "center-align">add new to do item</h1>
+                <h1 className = "center-align">Add a new To Do</h1>
                 <div className = "right-align">
-                    <Link className="btn red darken-2" to="/">Go Back</Link>
+                    <Link className="btn light blue darken-2" to="/">Go Back</Link>
                 </div>
                 <form onSubmit = { handleSubmit(() => {
                     this.submitItem(vals)
                 })} >
                     <Field name="title" component={this.renderInput} type = "text" label = "Title" />
                     <Field name = "details" component = { this.renderInput } type = "text" label = "Details" />
-                    <button className = "btn green darken-2">Add Item</button>
-                    <button className = "btn yellow darken-4" onClick = { reset } type = "button">Reset</button>
+                    <div className = "row">
+                        <div className="col s4 offset-s4 m2 offset-m8">
+                            <button className = "btn green darken-2">Add</button>
+                        </div>
+                        <div className="col s4 m2">
+                            <button className = "btn yellow darken-1" onClick = { reset } type = "button">Reset </button>
+                        </div>
+                    </div>
                 </form>
 
             </div>
