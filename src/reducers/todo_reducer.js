@@ -10,6 +10,8 @@ export default function(state = DEFAULT_STATE, action){
             return {...state, single: action.payload.data.todo };
         case types.TOGGLE_COMPLETE:
             return {...state , single: action.payload.data.todo};
+        case types.DELETE_ITEM:
+            return {...state , single: action.payload.data.todo}; 
         default:    
             return state;
     }

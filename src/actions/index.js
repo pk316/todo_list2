@@ -41,7 +41,7 @@ export function toggleComplete(id){
 }
 
 export function deleteItem(id){
-    const request = axios.put(` ${BASE_URL}/${id + API_KEY}`);
+    const request = axios.delete(` ${BASE_URL}/${id + API_KEY}`);
 
     return {
         type: types.DELETE_ITEM,
